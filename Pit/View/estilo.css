@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#fundoSite {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 98vh;
+}
+
+.divFundo {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fundo1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10vw;
+}
+
+.fundo2 {
+    background-color: #990D35;
+}
+
+.imgFundo {
+    width: 43vw;
+}
+
+.areaImgFundo {
+    margin-left: -28vw;
+    margin-top: 10vh;
+}
+
+#areaLogSen {
+    display: grid;
+    grid: "1" "1" "1";
+}
+
+.tituloLogin {
+    font-weight: 900;
+    font-size: 2vw;
+    color: #990D35;
+    text-align: left;
+}
+
+.tituloLog {
+    font-size: 1vw;
+}
+
+.inputEntrada {
+    border: 0.2vw solid #990D35;
+    border-radius: 0.3vw;
+    width: 20vw;
+    height: 4vh;
+    padding-left: 0.5vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7vw;
+}
+
+
+.EsqueceSenha{
+    color: #990D35;
+    font-size: 0.75vw;
+    padding: 1vw 0;
+    text-decoration: none;
+}
+
+.areaBtnLog {
+    margin-left: 2.7vw;
+    margin-top: 4vh;
+}
+
+#btnLogar {
+    width: 15vw;
+    height: 4vh;
+    border-radius: 0.3vw;
+    border: none;
+    background-color: #990D35;
+    color: #fff;
+    font-size: 0.9vw;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.areaLinksCadastra {
+    margin-top: 4vh;
+}
+
+.linkCadastra {
+    text-decoration: none;
+    font-size: 0.75vw;
+    color: #990D35;
+    text-align: center;
+    margin-left: 4vw;
+
+}
+
+.lC2 {
+    margin-left: 5.5vw;
+}
+
+.areaImgFundo2 {
+    margin-left: -28vw;
+    margin-top: 15vh;
+}
+
+.imgFundo2 {
+    width: 35vw;
+}
+
+#olho{
+    margin-left: 200%;
+    position: absolute;
+}
+
+/************************************
+*************************************
+*********** TELA RESERVA ***********/
+
+#botao-cor {
+    width: 3.2vw;
+}
+
+#botao-cor1 {
+    display: none;
+    width: 3.2vw;
+}
+
+#topoSite {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+}
+
+#Pesquisa {
+    width: 80%;
+    background-color: #990D35;
+    border: none;
+    padding: 0.7vw 0 0.7vw 1vw;
+    border-radius: 12px;
+}
+
+#Pesquisa:focus, select:focus {
+    color: #b3b3b3;
+    border: none;
+}
+
+#Pesquisa::placeholder {
+    color: #b3b3b3;
+    font-family: 'Poppins', sans-serif;
+}
+
+#tituloSite {
+    margin-left: 2vw;
+    display: grid;
+    align-items: center;
+}
+
+#iconTrin {
+    width: 12vw;
+}
+
+#areaIcons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+#iconLogin {
+    width: 2.2vw;
+}
+
+#iconCar {
+    width: 3vw;
+}
+
+#areaConteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    align-items: center;
+    padding-top: 7vw;
+}
+
+#imgReserva {
+    width: 50vw;
+}
+
+#tituloConteudo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 4vw;
+    color: #990D35;
+}
+
+#imgReserva {
+    margin-left: 2vw;
+}
+
+#areaReservaCont {
+    display: grid;
+    justify-content: center;
+}
+
+#textoConteudo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1vw;
+}
+
+#btnReserva {
+    font-family: 'Poppins', sans-serif;
+    color: #990D35;
+    font-size: 1vw;
+    background-color: transparent;
+    border: #990D35 solid 1px;
+    padding: 0.5vw 0vw;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 0.5vw;
+}
+
+#area-botao-cor {
+    cursor: pointer;
+}
