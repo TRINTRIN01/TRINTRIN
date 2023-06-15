@@ -48,7 +48,7 @@
             <label for="telefone" name="tel" class="tituloLog">Telefone</label>
             <input type="text" id="tel" name="tel" class="inputEntrada" placeholder="(99) 99999-9999" oninput="mascara_telefone()" required>
         </div>
-        <div class="areaBtnLog"><a href="Login.php" class="linkCad"><input type="submit" name="submit" id="submit"></a></div>
+        <div class="areaBtnLog"><a href="Login.php" class="linkCad"><input type="submit" name="submit" id="submit" class="botaoCadastro"></a></div>
         <div class="areaLinksCadastra"><a href="CadastroL.php" class="linkCadastra lC2">Cadastro como LOCADOR</a></div>
     </form>
     <div class="divFundo fundo2">

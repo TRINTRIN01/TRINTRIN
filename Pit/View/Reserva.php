@@ -12,8 +12,8 @@
         <div id="tituloSite"><img src="imagens/iconTrin.png" alt="" id="iconTrin"></div>
         <div id="areaPesquisa"><input type="text" id="Pesquisa" placeholder="Pesquise aqui..."></div>
         <div id="areaIcons">
-            <div class="icons areaIconLog"><img src="imagens/iconLogin.png" alt="" id="iconLogin"></div>
-            <div class="icons areaIconCar"><img src="imagens/iconCarrinho.png" alt="" id="iconCar"></div>
+            <div class="icons areaIconLog"><a href="Login.php"><img src="imagens/iconLogin.png" alt="" id="iconLogin"></a></div>
+            <div class="icons areaIconCar"><a href="Reserva.php"><img src="imagens/iconCarrinho.png" alt="" id="iconCar"></a></div>
             <div id="area-botao-cor">
                 <img src="imagens/modoCor.png" alt="" id="botao-cor" onclick="trocaCor()">
                 <img src="imagens/modoEscuro.png" alt="" id="botao-cor1" onclick="voltarCor()">

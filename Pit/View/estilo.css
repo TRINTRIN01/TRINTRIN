@@ -121,6 +121,30 @@
     position: absolute;
 }
 
+.botaoLogar {
+    background-color: #990D35;
+    padding: 0.5vw 4vw;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 1vw;
+    border: none;
+    border-radius: 10px;
+    margin-left: 1vw;
+}
+
+.botaoCadastro {
+    background-color: #990D35;
+    padding: 0.5vw 4vw;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 1vw;
+    border: none;
+    border-radius: 10px;
+    margin-left: 1vw;
+}
+
 /************************************
 *************************************
 *********** TELA RESERVA ***********/
@@ -175,11 +199,11 @@
 }
 
 #iconLogin {
-    width: 2.2vw;
+    width: 2vw;
 }
 
 #iconCar {
-    width: 3vw;
+    width: 2.5vw;
 }
 
 #areaConteudo {
@@ -229,4 +253,64 @@
 
 #area-botao-cor {
     cursor: pointer;
+}
+
+/************************************
+*************************************
+******** TELA CADASTRO BIKE ********/
+
+#picture__input {
+    display: none;
+  }
+  
+  .picture {
+    width: 400px;
+    aspect-ratio: 16/9;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border: 2px dashed currentcolor;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    outline: none;
+    overflow: hidden;
+  }
+  
+  .picture:hover {
+    color: #777;
+    background: #ccc;
+  }
+  
+  .picture:active {
+    border-color: turquoise;
+    color: turquoise;
+    background: #eee;
+  }
+  
+  .picture:focus {
+    color: #777;
+    background: #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .picture__img {
+    max-width: 100%;
+  }
+
+#areaPreencherCadBike {
+    display: grid;
+    justify-content: right;
+}
+
+#areaPreencherCadBike input {
+    margin-bottom: 0.7vw;
+}
+
+#formCadastroBike {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10vw;
 }
