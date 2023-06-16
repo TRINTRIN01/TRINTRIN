@@ -56,6 +56,7 @@
 }
 
 .inputEntrada {
+    background-color: transparent;
     border: 0.2vw solid #990D35;
     border-radius: 0.3vw;
     width: 20vw;
@@ -116,11 +117,6 @@
     width: 35vw;
 }
 
-#olho{
-    margin-left: 200%;
-    position: absolute;
-}
-
 .botaoLogar {
     background-color: #990D35;
     padding: 0.5vw 4vw;
@@ -162,6 +158,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
+    margin-top: 0.5vw;
 }
 
 #Pesquisa {
@@ -264,14 +261,15 @@
   }
   
   .picture {
-    width: 400px;
+    width: 19vw;
     aspect-ratio: 16/9;
-    background: #ddd;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #aaa;
-    border: 2px dashed currentcolor;
+    align-content: center;
+    color: #990D35;
+    border: 2px dashed #990D35;
     cursor: pointer;
     font-family: sans-serif;
     transition: color 300ms ease-in-out, background 300ms ease-in-out;
@@ -280,8 +278,8 @@
   }
   
   .picture:hover {
-    color: #777;
-    background: #ccc;
+    color: #000000;
+    background: #f0ecec 50%;
   }
   
   .picture:active {
@@ -291,8 +289,8 @@
   }
   
   .picture:focus {
-    color: #777;
-    background: #ccc;
+    color: #000000;
+    background: #f0ecec 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
   
@@ -302,15 +300,73 @@
 
 #areaPreencherCadBike {
     display: grid;
-    justify-content: right;
+    justify-content: center;
 }
 
 #areaPreencherCadBike input {
     margin-bottom: 0.7vw;
+    border: 2px solid #990D35;
 }
 
 #formCadastroBike {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 10vw;
+}
+
+#areaImagemProduto {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#areaConteudoCadBike {
+    margin: 0 6vw;
+}
+
+#btnCadBike {
+    background-color: transparent;
+    border: 1px solid #990D35;
+    color: #990D35;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9vw;
+    padding: 0.1vw 1vw;
+}
+
+#areaBtnCadBike {
+    display: grid;
+    justify-content: right;
+    margin-top: 2vw;
+}
+
+#rodape {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-top: 14vw;
+    padding: 0 3vw;
+}
+
+#areaLinksPag {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.linkPaginaSite {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9vw;
+}
+
+#iconTrinRodape {
+    width: 10vw;
+}
+
+#areaLogoSite {
+    text-align: right;
+}
+
+#fundoCadBike {
+    height: 100%;
 }
