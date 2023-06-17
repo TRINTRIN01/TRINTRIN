@@ -5,13 +5,28 @@
 
     include_once('config.php');
 
-      $nomeBicicleta = $_POST['nomeBicicleta'];
+      $nomeBicicleta = $_POST['nomeBike'];
+      $local = $_POST['local'];
       $nomeLocador = $_POST['nomeLocador'];
-      $valor = $_POST['valor'];
-      $tel = $_POST['telefone'];
+      $valor = $_POST['valorAluguel'];
+      $tel = $_POST['tel'];
 
-      $result = mysqli_query($conexao, "INSERT INTO Bicicleta(nomeBicicleta,nomeLocador,valor,telefone)
-       VALUES('$nomeBicicleta','$nome','$senha','$endereco','$tel')");
+        if(isset($_FILES['picture__input'])) {
+            $arquivo = $_FILES['picture__input'];
+
+            $pasta = "arquivos/";
+            $nomeDoArquivo = $arquivo['name'];
+            $novoNomeDoArquivo = uniqid();
+            $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
+
+            $path = $pasta . $novoNomeDoArquivo . "." . $extensao;
+            $deu_certo = move_uploaded_file($arquivo["tmp_name"], $path);
+            if($deu_certo) {
+                $result = mysqli_query($conexao, "INSERT INTO bicicleta(nomeArquivoImagem,caminhoArquivo,nomeBicicleta,nomeLocador,valor,telefone)
+                VALUES('$nomeDoArquivo','$path','$nomeBicicleta','$nomeLocador','$valor','$tel')");
+            }
+        }
+      
      }
 ?>
 <!DOCTYPE html>
