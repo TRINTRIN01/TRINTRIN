@@ -430,4 +430,22 @@
         margin-top: -0.5vw;
     }
 
+    #imgReserva {
+        width: 53vw;
+    }
+
+    #tituloConteudo {
+        font-size: 5vw;
+    }
+
+    #textoConteudo {
+        font-size: 1.3vw;
+    }
+
+    #btnReserva{
+        font-size: 1.4vw;
+        padding: 0.2vw 0;
+        margin-top: 2vw;
+    }
+
 }
