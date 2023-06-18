@@ -19,7 +19,7 @@
             <input type="password" id="pass" name="pass"class="inputEntrada" placeholder="Password">
             <a href="" class="EsqueceSenha">Esqueceu a Senha?</a>
         </div>
-        <div class="areaBtnLog"><input type="submit" name="submit" id="submit"></div>
+        <div class="areaBtnLog"><input type="submit" name="submit" id="submit" class="botaoLogar"></div>
         <div class="areaLinksCadastra"><a href="CadastroL.php" class="linkCadastra">Não tem conta? Cadastre-se</a></div>
         <div class="areaLinksCadastra"><a href="Login.php" class="linkCadastra lC2">Login como usuario</a></div>
     </form>

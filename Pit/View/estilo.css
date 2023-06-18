@@ -58,7 +58,7 @@
 .inputEntrada {
     background-color: transparent;
     border: 0.2vw solid #990D35;
-    border-radius: 0.3vw;
+    border-radius: 5px;
     width: 20vw;
     height: 4vh;
     padding-left: 0.5vw;
@@ -349,8 +349,10 @@
 
 #areaLinksPag {
     display: grid;
+    column-gap: 0.8vw;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
+    justify-items: center;
 }
 
 .linkPaginaSite {
@@ -370,4 +372,62 @@
 
 #fundoCadBike {
     height: 100%;
+}
+
+@media (max-width: 1024px) {
+
+    .picture {
+        width: 30vw;
+    }
+
+    #areaPreencherCadBike input {
+        width: 30vw;
+        font-size: 1vw;
+    }
+
+    #btnCadBike {
+        font-size: 1.5vw;
+        padding: 0.3vw 2.5vw;
+    }
+
+    .linkPaginaSite {
+        font-size: 1.5vw;
+    }
+
+    .divFundo {
+        font-size: 2vw;
+    }
+
+    .divFundo h2 {
+        font-size: 2.6vw;
+    }
+
+    .divFundo label {
+        font-size: 1.6vw;
+    }
+
+    .divFundo input {
+        width: 25vw;
+        font-size: 1vw;
+    }
+
+    .EsqueceSenha {
+        font-size: 1.2vw;
+    }
+
+    .linkCadastra {
+        font-size: 1.2vw;
+    }
+
+    .areaBtnLog input {
+        font-size: 1.4vw;
+        padding: 0.3vw 0.1vw;
+        margin-left: -2.2vw;
+    }
+
+    .olho {
+        margin-left: 4vw;
+        margin-top: -0.5vw;
+    }
+
 }
