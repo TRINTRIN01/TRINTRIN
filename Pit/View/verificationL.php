@@ -29,7 +29,7 @@ if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['pass']) 
   else{
     $_SESSION['email'] = $email;
     $_SESSION['senha'] = $senha;
-    header('location: sistema.php');
+    header('location: CadastroBike.php');
   }
 }
 else

@@ -157,7 +157,7 @@
 #topoSite {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
+    align-items: top;
     margin-top: 0.5vw;
 }
 
@@ -182,7 +182,7 @@
 #tituloSite {
     margin-left: 2vw;
     display: grid;
-    align-items: center;
+    align-items: top;
 }
 
 #iconTrin {
@@ -192,7 +192,7 @@
 #areaIcons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
+    align-items: top;
 }
 
 #iconLogin {
@@ -332,6 +332,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 0.9vw;
     padding: 0.1vw 1vw;
+    cursor: pointer;
 }
 
 #areaBtnCadBike {
@@ -351,11 +352,13 @@
     display: grid;
     column-gap: 0.8vw;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
+    align-items: end;
     justify-items: center;
 }
 
 .linkPaginaSite {
+    display: grid;
+    align-items: end;
     text-decoration: none;
     color: #000000;
     font-family: 'Poppins', sans-serif;
@@ -373,6 +376,79 @@
 #fundoCadBike {
     height: 100%;
 }
+
+/************************************
+*************************************
+******** TELA OPÇÃO LOGIN **********/
+
+#fundoIndex {
+    display: grid;
+    grid-template-rows: 1fr 2fr 0.3fr;
+}
+
+#areaOpcaoLogar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.imgOpcao {
+    width: 17vw;
+    animation-name: pulaLogin;
+    position: relative;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulaLogin {
+   100% {transform: scale(1.06);}
+}
+
+.areaImgOpcao {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+#tituloOpcao {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 8vw;
+    font-size: 1.1vw;
+    margin-top: -2vw;
+}
+
+#ConteudoIndex {
+    display: grid;
+    align-items: center;
+}
+
+#topoSiteIndex {
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+    align-items: top;
+    margin-top: 0.5vw;
+}
+
+#rodapeIndex {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 0 3vw;
+    margin-top: 9.5vw;
+    align-items: end;
+}
+
+.linkDirecLogin {
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.99vw;
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    margin-top: 1vw;
+}
+
+/************************************
+*************************************
+*********** @media 1024px **********/
 
 @media (max-width: 1024px) {
 

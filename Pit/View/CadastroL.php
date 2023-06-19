@@ -34,7 +34,7 @@
     <title>Cadastro</title>
 </head>
 <body id="fundoSite">
-    <form action="CadastroL.php" method="POST" class="divFundo fundo1">
+    <form action="LoginL.php" method="POST" class="divFundo fundo1">
         <h2 class="tituloLogin">Create Account Locador</h2>
         <div id="areaLogSen">
             <label for="nome" class="tituloLog">Nome Completo</label>
