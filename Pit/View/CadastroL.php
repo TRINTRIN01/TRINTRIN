@@ -34,7 +34,7 @@
     <title>Cadastro</title>
 </head>
 <body id="fundoSite">
-    <form action="LoginL.php" method="POST" class="divFundo fundo1">
+    <form action="CadastroL.php" method="POST" class="divFundo fundo1">
         <h2 class="tituloLogin">Create Account Locador</h2>
         <div id="areaLogSen">
             <label for="nome" class="tituloLog">Nome Completo</label>
@@ -48,8 +48,9 @@
             <label for="telefone" name="tel" class="tituloLog">Telefone</label>
             <input type="text" id="tel" name="tel" class="inputEntrada" placeholder="(99) 99999-9999" oninput="mascara_telefone()" required>
         </div>
-        <div class="areaBtnLog"><a href="LoginL.php" class="linkCad"><input type="submit" name="submit" id="submit" class="botaoCadastro"></a></div>
-        <div class="areaLinksCadastra"><a href="Cadastro.php" class="linkCadastra lC2">Cadastro como usuario</a></div>
+        <div class="areaBtnLog"><input type="submit" name="submit" value="Cadastrar" id="submit" class="botaoCadastro"></div>
+        <a href="LoginL.php" class="linkMandarLogin">Ir para Login</a>
+        <div class="areaLinksCadastra"><a href="Cadastro.php" class="linkCadastra lC2">Cadastro como Cliente</a></div>
     </form>
     <div class="divFundo fundo2">
         <div class="areaImgFundo2"><img src="imagens/imgCad.png" alt="" class="imgFundo2"></div>

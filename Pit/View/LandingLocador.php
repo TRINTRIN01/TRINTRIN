@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-    <title>Trin Trin - Reserva</title>
+    <title>Trin Trin - Landing Locador</title>
 </head>
 <body id="fundoReserva">
     <footer id="topoSite">
@@ -21,15 +21,14 @@
         </div>
     </footer>
 
-    <header id="areaConteudo">
-        <div id="areaImgRes"><img src="imagens/imgReserva.png" alt="" id="imgReserva"></div>
-        <div id="areaReservaCont">
-            <h1 id="tituloConteudo">Bikes de <br> Montanha</h1>
+    <header id="areaConteudoLand">
+        <div id="areaImgLoc"><img src="imagens/BikeLocador.png" alt="" id="imgLandingL"></div>
+        <div id="areaReservaCont" class="areaContLoc">
+            <h1 id="tituloConteudo">Bikes</h1>
             <div id="textoConteudo">
-            Reserve sua bicicleta para aproveitar o melhor da vida.<br>
-            Aproveite para lazer, trabalho... O que desejar <br> justamente com a TRINTRIN !!!
+            Cadastre sua bicicleta, e exponha o melhor <br> do seu produto para o mercado juntamente <br> com a TRINTRIN!
             </div>
-            <a id="btnReserva" href="">Reservar</a>
+            <a id="btnLanding" href="CadastroBike.php">Cadastrar</a>
         </div>
     </header>
 </body>

@@ -105,7 +105,7 @@
 }
 
 .lC2 {
-    margin-left: 5.5vw;
+    margin-left: 6vw;
 }
 
 .areaImgFundo2 {
@@ -139,6 +139,18 @@
     border: none;
     border-radius: 10px;
     margin-left: 1vw;
+}
+
+.linkMandarLogin {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-decoration: none;
+    margin-top: 1vw;
+    margin-left: 5.5vw;
+    width: 10vw;
+    color: #990D35;
+    font-family: 'Poppins', sans-serif;
 }
 
 /************************************
@@ -212,7 +224,40 @@
 }
 
 #imgReserva {
-    width: 50vw;
+    width: 52vw;
+    animation-name: pulaImg;
+    position: relative;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+#areaImgLoc {
+    display: grid;
+    justify-content: center;
+}
+
+#imgLandingL {
+    width: 40vw;
+    animation-name: pulaImg;
+    position: relative;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulaImg {
+   100% {transform: scale(1.02);}
+}
+
+.areaContLoc {
+    margin-left: -5vw;
+}
+
+#areaConteudoLand {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    align-items: center;
+    padding-top: 5vw;
 }
 
 #tituloConteudo {
@@ -236,7 +281,7 @@
     font-size: 1vw;
 }
 
-#btnReserva {
+#btnReserva, #btnLanding {
     font-family: 'Poppins', sans-serif;
     color: #990D35;
     font-size: 1vw;
@@ -246,6 +291,10 @@
     text-align: center;
     text-decoration: none;
     margin-top: 0.5vw;
+}
+
+#btnLanding {
+    margin-top: 4vw;
 }
 
 #area-botao-cor {
