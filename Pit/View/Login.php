@@ -17,7 +17,7 @@
             <label for="senha" class="tituloLog">Password</label>
             <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" width="20px" id="olho" class="olho">
             <input type="password" id="pass" name="pass"class="inputEntrada" placeholder="Password">
-            <a href="" class="EsqueceSenha">Esqueceu a Senha?</a>
+            <a href="recuSenha.php" class="EsqueceSenha">Esqueceu a Senha?</a>
         </div>
         <div class="areaBtnLog"><input type="submit" name="submit" id="submit" class="botaoLogar"></div>
         <div class="areaLinksCadastra"><a href="Cadastro.php" class="linkCadastra">Não tem conta? Cadastre-se</a></div>
