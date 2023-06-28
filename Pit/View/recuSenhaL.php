@@ -24,11 +24,11 @@
             $novaSenha = substr(md5(time()), 0, 12);
             
             if(1 == 1/*mail($email, "Sua nova senha", "Sua nova senha é ".$novaSenha)*/) {
-                $sql_code = "UPDATE usuario SET senha = '$novaSenha' WHERE email = '$email'";
+                $sql_code = "UPDATE locador SET senha = '$novaSenha' WHERE email = '$email'";
                 $sql_query = $conexao->query($sql_code) or die($conexao->error);
 
                 if($sql_query) {
-                    echo  "<script>alert('Senha alterada com sucesso! Sua nova senha é $novaSenha'); location.href='Login.php';</script>";
+                    echo  "<script>alert('Senha alterada com sucesso! Sua nova senha é $novaSenha'); location.href='LoginL.php';</script>";
                 }
             }
         }
@@ -42,7 +42,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="passu.css">
+    <link rel="stylesheet" href="passL.css">
     <title>Login</title>
 </head>
 <body id="fundoRecuSenha">
@@ -56,7 +56,7 @@
         </div>
     </nav>
 
-    <form action="recuSenha.php" method="POST"  class="divFundo formRecuSenha">
+    <form action="recuSenhaL.php" method="POST"  class="divFundo formRecuSenha">
         <h2 class="tituloLogin TlSenha">RECUPERAÇÃO DE SENHA</h2>
         <div id="areaLogSen">
             <label for=""class="tituloLog">Email</label>
