@@ -6,24 +6,17 @@
         include_once('config.php');
 
         $email  = $conexao->escape_string($_POST['email']);
-
-        if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            echo  "<script>alert('Email inválido!');</script>";
-        }
+        $senhaAnt = $conexao->$_POST['passAnt'];
+        $senhaNova = $conexao->$_POST['passNew'];
 
         $sql = "SELECT senha FROM usuario WHERE email = '$email' ";
         $sql_query = $conexao->query($sql) or die($conexao->error);
         $dado = $sql_query->fetch_assoc();
         $total = $sql_query->num_rows;
 
-        if($total == 0) {
-            echo  "<script>alert('O e-mail informado não foi registrado anteriormente!');</script>";
-        }
-
         if($total > 0) {
-            $novaSenha = substr(md5(time()), 0, 12);
             
-            if(1 == 1/*mail($email, "Sua nova senha", "Sua nova senha é ".$novaSenha)*/) {
+            if(1 == 1) {
                 $sql_code = "UPDATE usuario SET senha = '$novaSenha' WHERE email = '$email'";
                 $sql_query = $conexao->query($sql_code) or die($conexao->error);
 
@@ -57,13 +50,17 @@
     </nav>
 
     <form action="recuSenha.php" method="POST"  class="divFundo formRecuSenha">
-        <h2 class="tituloLogin TlSenha">RECUPERAÇÃO DE SENHA</h2>
+        <h2 class="tituloLogin TlSenha">TROCAR SENHA</h2>
         <div id="areaLogSen">
             <label for=""class="tituloLog">Email</label>
-            
+            <input type="email" id="email" name="email" class="inputEntrada"  placeholder="username@gmail.com" oninput="emailMask(email)"  required>
+            <label for=""class="tituloLog">Senha Antiga</label>
+            <input type="password" id="passAnt" name="passAnt"class="inputEntrada" placeholder="Password">
+            <label for=""class="tituloLog">Nova Senha</label>
+            <input type="password" id="passNew" name="passNew"class="inputEntrada" placeholder="Password">
         </div>
-        <input type="email" id="email" name="email" class="inputEntrada"  placeholder="username@gmail.com" oninput="emailMask(email)"  required>
-        <input type="submit" name="ok" value="OK" id="submit" class="botaorecuSenha">
+        
+        <input type="submit" name="ok" value="CONFIRMAR" id="submit" class="botaorecuSenha">
     </form>
 
     <footer id="rodape">
