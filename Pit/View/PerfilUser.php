@@ -49,5 +49,5 @@
         <div id="areaLogoSite"><img src="imagens/iconTrin.png" alt="" id="iconTrinRodape"></div>
     </footer>
 </body>
-<script src="JS/passu.js"></script>
+<script src="JS/scriptPerfil.js"></script>
 </html>

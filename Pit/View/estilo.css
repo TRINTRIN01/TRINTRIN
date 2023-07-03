@@ -393,7 +393,7 @@
 #rodape {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    margin-top: 14vw;
+    margin-top: 13vw;
     padding: 0 3vw;
 }
 
@@ -528,7 +528,7 @@
 ***** TELA DE PERFIL DO USÚARIO *****/
 
 .formPerfilUser {
-    margin-top: 6.4vw;
+    margin-top: 5.5vw;
     display: grid;
     justify-items: center;
 }
@@ -536,7 +536,7 @@
 #rodapePerfil {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    margin-top: 8vw;
+    margin-top: 5.4vw;
     padding: 0 3vw;
 }
 
