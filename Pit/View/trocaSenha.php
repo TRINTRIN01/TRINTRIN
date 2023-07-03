@@ -1,18 +1,31 @@
 <?php
-
-     
-    if(isset($_POST['submit']))
-    {
-
-   include_once('config.php');
-
-     $email = $_POST['email'];
-     $senhaAntiga = $_POST['senhaantiga'];
-     $Novasenha = $_POST['senhanova'];
+    session_start();
     
+    if(isset($_POST['ok']))
+    {
+        include_once('config.php');
 
-     $result = mysqli_query($conexao, "INSERT INTO usuario(email,senha)
-     VALUES('$email','$Novasenha')");}
+        $email  = $conexao->escape_string($_POST['email']);
+        $senhaAnt = $conexao->$_POST['passAnt'];
+        $senhaNova = $conexao->$_POST['passNew'];
+
+        $sql = "SELECT senha FROM usuario WHERE email = '$email' ";
+        $sql_query = $conexao->query($sql) or die($conexao->error);
+        $dado = $sql_query->fetch_assoc();
+        $total = $sql_query->num_rows;
+
+        if($total > 0) {
+            
+            if(1 == 1) {
+                $sql_code = "UPDATE usuario SET senha = '$novaSenha' WHERE email = '$email'";
+                $sql_query = $conexao->query($sql_code) or die($conexao->error);
+
+                if($sql_query) {
+                    echo  "<script>alert('Senha alterada com sucesso! Sua nova senha é $novaSenha'); location.href='trocaSenha.php';</script>";
+                }
+            }
+        }
+    }
 ?>
 
 <!DOCTYPE html>
