@@ -23,6 +23,7 @@
       $query = "SELECT * FROM  usuario WHERE email = '$email'";
        $resu = $conexao->query($query);
     
+       //testa se o email ja foi cadastrado no BD
        if($resu->num_rows >= 1){
          echo  "<script>alert('Este e-mail já foi cadastrado');</script>";
        }
