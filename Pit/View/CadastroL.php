@@ -20,8 +20,16 @@
       $endereco = $_POST['endereco'];
       $tel = $_POST['tel'];
 
-      $result = mysqli_query($conexao, "INSERT INTO locador(email,nome,senha,endereco,telefone)
-       VALUES('$email','$nome','$senha','$endereco','$tel')");
+      $query = "SELECT * FROM  usuario WHERE email = '$email'";
+       $resu = $conexao->query($query);
+    
+       if($resu->num_rows >= 1){
+         echo  "<script>alert('Este e-mail já foi cadastrado');</script>";
+       }
+       else{
+        $result = mysqli_query($conexao, "INSERT INTO usuario(email,nome,senha,endereco,telefone)
+        VALUES('$email','$nome','$senha','$endereco','$tel')");
+       }
      }
 ?>
 <!DOCTYPE html>
