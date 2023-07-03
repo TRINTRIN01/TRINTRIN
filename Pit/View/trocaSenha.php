@@ -1,31 +1,33 @@
 <?php
     session_start();
     
-    if(isset($_POST['ok']))
-    {
-        include_once('config.php');
-
+    include_once('config.php');
+    if(isset($_POST['submit'])) {
+        
         $email  = $conexao->escape_string($_POST['email']);
-        $senhaAnt = $conexao->$_POST['passAnt'];
-        $senhaNova = $conexao->$_POST['passNew'];
 
-        $sql = "SELECT senha FROM usuario WHERE email = '$email' ";
-        $sql_query = $conexao->query($sql) or die($conexao->error);
-        $dado = $sql_query->fetch_assoc();
-        $total = $sql_query->num_rows;
-
-        if($total > 0) {
-            
-            if(1 == 1) {
-                $sql_code = "UPDATE usuario SET senha = '$novaSenha' WHERE email = '$email'";
-                $sql_query = $conexao->query($sql_code) or die($conexao->error);
-
-                if($sql_query) {
-                    echo  "<script>alert('Senha alterada com sucesso! Sua nova senha é $novaSenha'); location.href='trocaSenha.php';</script>";
-                }
-            }
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo  "<script>alert('Email inválido!');</script>";
         }
+
+        $senhaAnt = $_POST['passAnt'];
+        $senhaNova = $_POST['passNew'];
+        $senhaBd = ("SELECT senha FROM usuario WHERE email = $email and senha = $senhaAnt");
+
+        if($senhaBd == $senhaAnt) {
+            $sql = "UPDATE usuario SET senha = $senhaNova WHERE email = $email";
+            $sql_query = $conexao->query($sql);
+            
+            $sql_code = "UPDATE usuario SET senha = '$senhaNova' WHERE email = '$email'";
+            $sql_query = $conexao->query($sql_code);
+            echo  "<script>alert('Senha atualizada com sucesso!'); location.href='Reserva.php';</script>";
+        }
+        else {
+            echo  "<script>alert('Senha incompativel!');</script>";
+        }
+        
     }
+    
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +51,7 @@
         </div>
     </nav>
 
-    <form action="recuSenha.php" method="POST"  class="divFundo formRecuSenha">
+    <form action="trocaSenha.php" method="POST"  class="divFundo formRecuSenha">
         <h2 class="tituloLogin TlSenha">TROCAR SENHA</h2>
         <div id="areaLogSen">
             <label for=""class="tituloLog">Email</label>
@@ -60,7 +62,7 @@
             <input type="password" id="passNew" name="passNew"class="inputEntrada" placeholder="Password">
         </div>
         
-        <input type="submit" name="ok" value="CONFIRMAR" id="submit" class="botaorecuSenha">
+        <input type="submit" name="submit" value="CONFIRMAR" id="submit" class="botaorecuSenha">
     </form>
 
     <footer id="rodape">
@@ -74,5 +76,5 @@
         <div id="areaLogoSite"><img src="imagens/iconTrin.png" alt="" id="iconTrinRodape"></div>
     </footer>
 </body>
-<script src="JS/passu.js"></script>
+<script src="JS/scriptPerfil.js"></script>
 </html>
