@@ -22,9 +22,12 @@
 
        $query = "SELECT * FROM  usuario WHERE email = '$email'";
        $resu = $conexao->query($query);
+
+       $queryL = "SELECT * FROM  locador WHERE email = '$email'";
+       $resuL = $conexao->query($queryL);
     
        //testa se o email ja foi cadastrado no BD
-       if($resu->num_rows >= 1){
+       if($resu->num_rows >= 1 || $resuL->num_rows >= 1){
          echo  "<script>alert('Este e-mail já foi cadastrado');history.go(-1);</script>";
        }
        else{
@@ -32,6 +35,9 @@
         VALUES('$email','$nome','$senha','$endereco','$tel')");
          header('location: Login.php'); 
        }
+         
+
+       
       
      }
 

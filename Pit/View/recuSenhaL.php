@@ -11,7 +11,7 @@
             echo  "<script>alert('Email inválido!');</script>";
         }
 
-        $sql = "SELECT senha FROM usuario WHERE email = '$email' ";
+        $sql = "SELECT senha FROM locador WHERE email = '$email' ";
         $sql_query = $conexao->query($sql) or die($conexao->error);
         $dado = $sql_query->fetch_assoc();
         $total = $sql_query->num_rows;
@@ -28,7 +28,7 @@
                 $sql_query = $conexao->query($sql_code) or die($conexao->error);
 
                 if($sql_query) {
-                    echo  "<script>alert('Senha alterada com sucesso! Sua nova senha é $novaSenha'); location.href='LoginL.php';</script>";
+                    echo  "<script>alert('Senha alterada com sucesso! Sua nova senha é  >>>>>  $novaSenha'); location.href='LoginL.php';</script>";
                 }
             }
         }

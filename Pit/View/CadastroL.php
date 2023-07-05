@@ -22,9 +22,12 @@
 
       $query = "SELECT * FROM  locador WHERE email = '$email'";
        $resu = $conexao->query($query);
+
+       $queryU = "SELECT * FROM  usuario WHERE email = '$email'";
+       $resuU = $conexao->query($queryU);
     
        //testa se o email ja foi cadastrado no BD
-       if($resu->num_rows >= 1){
+       if($resu->num_rows >= 1 || $resuU->num_rows >= 1){
          echo  "<script>alert('Este e-mail já foi cadastrado');history.go(-1);</script>";
        }
        else{
