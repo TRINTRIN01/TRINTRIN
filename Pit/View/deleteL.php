@@ -19,15 +19,15 @@ if(!empty($_POST['ExcConta']))
         
             if ($resultDelete) {
                 // O registro foi excluído com sucesso
-                echo "Registro excluído com sucesso.";
+                echo "Conta excluída com sucesso.";
                 header('location: index.html');
             } else {
                 // Ocorreu um erro ao excluir o registro
-                echo "Erro ao excluir o registro: " . $conexao->error;
+                echo "Erro ao excluir a conta: " . $conexao->error;
             }
         } else {
             // A consulta não retornou resultados
-            echo "Nenhum registro encontrado com o email informado.";
+            echo "Nenhuma conta encontrado com o email informado.";
         }
     } else {
         // Ocorreu um erro na consulta
