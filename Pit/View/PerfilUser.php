@@ -1,3 +1,6 @@
+<?php
+       
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,22 +22,22 @@
         </div>
     </nav>
 
-    <form action="recuSenha.php" method="POST"  class="divFundo formPerfilUser">
+    <form action="PerfilUser.php" method="POST"  class="divFundo formPerfilUser">
         <h2 class="tituloLogin TlSenha">MEU PERFIL</h2>
         <div id="areaLogSen">
         <label for="nome" class="tituloLog">Nome Completo</label>
-            <input type="text" id="nome areaEmail" name="nome"class="inputEntrada" placeholder="nome completo" required>
+            <input type="text" id="nome areaEmail" name="nome"class="inputEntrada" placeholder="nome completo"  required>
             <label for="email" class="tituloLog">Email</label>
-            <input type="email" id="email" name="email" class="inputEntrada" placeholder="username@gmail.com" oninput="emailMask(email)"  required>
+            <input type="email" id="email" name="email" class="inputEntrada" placeholder="username@gmail.com"   oninput="emailMask(email)"  required>
             <label for="senha" class="tituloLog">Password</label>
-            <input type="password" id="pass" name="pass" class="inputEntrada" placeholder="Password" required>
+            <input type="password" id="pass" name="pass" class="inputEntrada" placeholder="Password"    required>
             <label for="endereco" class="tituloLog">Endereço</label>
-            <input type="text" id="endereco areaSenha" name="endereco" class="inputEntrada" placeholder="Seu Endereço" required>
+            <input type="text" id="endereco areaSenha" name="endereco" class="inputEntrada" placeholder="Seu Endereço"   required>
             <label for="telefone" name="tel" class="tituloLog">Telefone</label>
-            <input type="text" id="tel" name="tel" class="inputEntrada" placeholder="(99) 99999-9999" oninput="mascara_telefone()" required>
+            <input type="text" id="tel" name="tel" class="inputEntrada" placeholder="(99) 99999-9999"    oninput="mascara_telefone()" required>
         </div>
         
-        <input type="submit" name="AtuPerfil" value="ATUALIZAR PERFIL" id="AtuPerfil" class="botaoAtualizar">
+        <input type="submit" name="AtuPerfil" value="ATUALIZAR PERFIL"  id="AtuPerfil" class="botaoAtualizar">
         <input type="submit" name="ExcConta" value="EXCLUIR CONTA" id="ExcConta" class="botaoExcluir">
     </form>
 

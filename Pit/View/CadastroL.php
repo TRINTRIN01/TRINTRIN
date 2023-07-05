@@ -30,6 +30,7 @@
        else{
         $result = mysqli_query($conexao, "INSERT INTO usuario(email,nome,senha,endereco,telefone)
         VALUES('$email','$nome','$senha','$endereco','$tel')");
+         header('location: LoginL.php'); 
        }
      }
 ?>
@@ -58,7 +59,6 @@
             <input type="text" id="tel" name="tel" class="inputEntrada" placeholder="(99) 99999-9999" oninput="mascara_telefone()" required>
         </div>
         <div class="areaBtnLog"><input type="submit" name="submit" value="Cadastrar" id="submit" class="botaoCadastro"></div>
-        <a href="LoginL.php" class="linkMandarLogin">Ir para Login</a>
         <div class="areaLinksCadastra"><a href="Cadastro.php" class="linkCadastra lC2">Cadastro como Cliente</a></div>
     </form>
     <div class="divFundo fundo2">

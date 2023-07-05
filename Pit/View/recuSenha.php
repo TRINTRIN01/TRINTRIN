@@ -28,7 +28,7 @@
                 $sql_query = $conexao->query($sql_code) or die($conexao->error);
 
                 if($sql_query) {
-                    echo  "<script>alert('Senha alterada com sucesso! Sua nova senha é  >>>>>    $novaSenha'); location.href='trocaSenha.php';</script>";
+                    echo  "<script>alert('Senha alterada com sucesso! Sua nova senha é  >>>>>    $novaSenha'); location.href='Login.php';</script>";
                 }
             }
         }
