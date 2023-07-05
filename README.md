@@ -34,4 +34,4 @@
 
 #deleteUser.php é onde o usuario deleta o seu perfil;
 
-index.html é onde o usuario escolhe como quer se conectar;
+#index.html é onde o usuario escolhe como quer se conectar;
