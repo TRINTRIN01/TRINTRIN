@@ -26,4 +26,12 @@
 
 #VerificationL.php é onde faz se uma verificação do Locador;
 
-#Update_L.php é onde ;
+#Update_L.php é onde o Locador altera o seu perfil;
+
+#Update_user.php é onde o usuario altera o seu perfil;
+
+#deleteL.php é onde o locador deleta o seu perfil;
+
+#deleteUser.php é onde o usuario deleta o seu perfil;
+
+index.html é onde o usuario escolhe como quer se conectar;
