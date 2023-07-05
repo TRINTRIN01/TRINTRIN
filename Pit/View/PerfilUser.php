@@ -22,7 +22,7 @@
         </div>
     </nav>
 
-    <form action="PerfilUser.php" method="POST"  class="divFundo formPerfilUser">
+    <form action="deleteUser.php" method="POST"  class="divFundo formPerfilUser">
         <h2 class="tituloLogin TlSenha">MEU PERFIL</h2>
         <div id="areaLogSen">
         <label for="nome" class="tituloLog">Nome Completo</label>

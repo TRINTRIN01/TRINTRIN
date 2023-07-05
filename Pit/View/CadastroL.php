@@ -20,7 +20,7 @@
       $endereco = $_POST['endereco'];
       $tel = $_POST['tel'];
 
-      $query = "SELECT * FROM  usuario WHERE email = '$email'";
+      $query = "SELECT * FROM  locador WHERE email = '$email'";
        $resu = $conexao->query($query);
     
        //testa se o email ja foi cadastrado no BD
@@ -28,7 +28,7 @@
          echo  "<script>alert('Este e-mail já foi cadastrado');</script>";
        }
        else{
-        $result = mysqli_query($conexao, "INSERT INTO usuario(email,nome,senha,endereco,telefone)
+        $result = mysqli_query($conexao, "INSERT INTO locador(email,nome,senha,endereco,telefone)
         VALUES('$email','$nome','$senha','$endereco','$tel')");
          header('location: LoginL.php'); 
        }
