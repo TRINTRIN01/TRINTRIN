@@ -57,7 +57,7 @@ if(!empty($_POST['AtuPerfil']))
             $row = $result->fetch_assoc(); // Obter a primeira linha do resultado
             $id = $row['usuario_id']; // Obter o valor da coluna 'id'
         
-            $sqlUpdate = "UPDATE usuario SET nome = '$nome', pass = '$senha', endereco = '$endereco', tel = '$tel'  WHERE email = '$email'";
+            $sqlUpdate = "UPDATE usuario SET nome = '$nome', senha = '$senha', endereco = '$endereco', telefone = '$tel'  WHERE email = '$email'";
             $resultUp = $conexao->query($sqlUpdate);
         
             if ($resultUp) {
